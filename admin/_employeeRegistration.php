@@ -1,4 +1,3 @@
-
     <div class="pad-x" id="login-container">
         <div class="page-title">
             <h1 class="heading">mayi<span class="highlight">help</span>you.io</h1>

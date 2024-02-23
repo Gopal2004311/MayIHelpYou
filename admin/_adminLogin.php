@@ -1,7 +1,7 @@
 <?php
 
 require "../partials/_dbConnect.php";
-session_start();
+// session_start();
 
 if (isset($_POST['admin_login'])&&!isset($_POST['employee-check'])) {
     $email = trim($_POST['email']);

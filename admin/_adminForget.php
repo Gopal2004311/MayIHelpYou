@@ -1,9 +1,10 @@
 <?php
 
 require "../partials/_dbConnect.php";
+error_reporting(0);
 session_start();
 
-if (isset($_POST['admin_login'])&&!isset($_POST['employee-check'])) {
+if (isset($_POST['admin_login'])&&!isset($_POST['employee-check-forget'])) {
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
@@ -28,7 +29,7 @@ if (isset($_POST['admin_login'])&&!isset($_POST['employee-check'])) {
     }
 
     $sql->close();
-}else if(isset($_POST['admin_login'])&& isset($_POST['employee-check'])){
+}else if(isset($_POST['admin_login'])&& isset($_POST['employee-check-forget'])){
      $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
@@ -79,13 +80,13 @@ if (isset($_POST['admin_login'])&&!isset($_POST['employee-check'])) {
                     <input class="form-input" type="email" name="email" id="email" value="<?php if (isset($_POST['login'])) echo $user_email; ?>" placeholder="E-mail" required />
                 </div>
                 <div class="form-element">
-                    <label class="form-label" for="password">Password</label>
+                    <label class="form-label" for="password">New Password</label>
                     <input class="form-input" type="password" name="password" id="password" placeholder="Password" value="<?php if (isset($_POST['login'])) echo ""; ?>" required />
                 </div>
                 <div class="form-element">
-                    <input class="form-input button submit-btn" type="submit" value="Login" name="admin_login" id="login">
+                    <input class="form-input button submit-btn" type="submit" value="Forget" name="admin_login" id="login">
                     <div class="links">
-                        <input type="checkbox" name="employee-check" id="employee-check-forget" value="employee-check"><span>Are you Employee?</span>
+                        <input type="checkbox" name="employee-check-forget" id="employee-check-forget" onclick="forget()" value="employee-check-forget"><span>Are you Employee?</span>
                         <a href="_adminLogin.php" class="forgot-pass">Login</a>
                     </div>
                 </div>
@@ -95,7 +96,6 @@ if (isset($_POST['admin_login'])&&!isset($_POST['employee-check'])) {
                 <span>Go to home page ?</span>
                 <a href="../index.php">Home</a>
             </div>
-
         </div>
     </div>
 </body>

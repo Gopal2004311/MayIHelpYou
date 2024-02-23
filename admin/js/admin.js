@@ -13,3 +13,15 @@ input.addEventListener("click", (Event) => {
     }
 })
 /*adminLogin.php script end here*/
+
+/*Change forget page according to admin or employee */
+const forgetImage = document.getElementById("forget-img");
+const forget = () => {
+    if (forget.checked === true) {
+        forgetImage.setAttribute("src", "../img/icons/employee.png");
+    } else {
+        forgetImage.setAttribute("src", "../img/icons/adminDark.png");
+    }
+}
+
+/*admin dashboard change dynamically according to admin click*/
