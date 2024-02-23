@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+
+    --blue: #0d6efd;
+    --purple: #6f42c1;
+    --pink: #d63384;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #198754;
+    --gray-dark: #343a40;
+    --cyan: #0dcaf0;
+    --text: #6c757d;
+    --dark: #212529;
+    --light: #fff;
+    --heading: #3E3232;
+    --body: #fafafa;
+    --radius: .5rem;
+    --shadow: box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--body);
+}
+
+::-webkit-scrollbar {
+    width: 1.5rem;
+}
+
+
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* By Default CSS style Start*/
+
+.center {
+    text-align: center;
+}
+
+.pad-x {
+    padding: 0 4rem;
+}
+
+.pad-y {
+    padding: 2.5rem 0;
+}
+
+.shadow {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+    font-size: 3.5rem;
+    color: var(--heading);
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.form-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--gray-dark);
+    display: block;
+    padding: .5rem 0;
+    letter-spacing: 1px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--gray-dark);
+    border-radius: .5rem;
+    outline: none;
+    margin: .5rem 0;
+    transition: all .2s linear;
+}
+
+.form-input:focus {
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.299);
+}
+
+
+.button {
+    padding: .9rem .6rem;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.form-line {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #310b0b14;
+    margin-top: 5rem;
+}
+
+.user-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.just-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+
+p {
+    font-size: 1.4rem;
+    color: var(--dark);
+    line-height: 1.5;
+    letter-spacing: .5px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+select {
+    cursor: pointer;
+}
+
+/* By Default CSS style End*/
+
+/* Admin login section start here */
+#login-container {
+    margin-top: 5rem;
+}
+
+#login-container .page-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#login-container .page-title h1 {
+    font-weight: 600;
+    font-size: 5rem;
+}
+
+#login-container .page-title h1 span {
+    color: var(--green);
+}
+
+#login-container .form-box {
+    width: 50rem;
+    margin: 1rem auto;
+    padding: 1rem 2rem 2rem 2rem;
+    border-radius: var(--radius);
+    background: var(--light);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin Login Div in form  */
+#login-container .form-box .form-heading {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#login-container .form-box .form-heading .admin-img {
+    width: 3rem;
+    height: 3rem;
+}
+
+#login-container .form-box .form-heading h3 {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    color: var(--gray-dark);
+}
+
+#login-container .form-box .form-element {
+    margin: 1.2rem 0;
+}
+
+/* .submit is class for buttons likes (login, sign-up) */
+#login-container .form-box .form-element .submit-btn {
+    background: var(--gray-dark);
+    color: var(--light);
+    margin-top: 2rem;
+    transition: all .2s ease-in;
+}
+
+#login-container .form-box .form-element .links {
+    margin-top: 5px;
+}
+
+#login-container .form-box .form-element .links #employee-check {
+    cursor: pointer;
+}
+
+#login-container .form-box .form-element .links span {
+    font-size: 15px;
+    margin-inline: 10px;
+    color: var(--dark);
+}
+
+#login-container .form-box .form-element .submit-btn:hover {
+    background-color: var(--dark);
+}
+
+
+#login-container .form-box .forgot-pass {
+    display: block;
+    float: right;
+    font-size: 13px;
+    color: var(--red);
+    margin: 1rem 0;
+}
+
+#login-container .form-box .sign-link {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+#login-container .form-box .sign-link span {
+    color: var(--text);
+    font-size: 1.4rem;
+    margin-right: .5rem;
+}
+
+#login-container .form-box .sign-link a {
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+
+/* Admin login section End here */
+
+/*Admin navbar section start here*/
+#admin-navbar {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    box-shadow: 1px 1px 7px var(--gray-dark);
+}
+
+#admin-navbar .logo img {
+    height: 30px;
+    width: 30px;
+}
+
+#admin-navbar .login-link img {
+    height: 10px;
+    width: 10px;
+}
+
+#admin-navbar .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin-inline: 10px;
+}
+
+
+/*admin panel css start here*/
+#admin-dashboard {
+    margin-top: 75px;
+    margin-left: 5px;
+    width: 25rem;
+    height: auto;
+    position: absolute;
+    box-shadow: 1px 1px 7px rgb(66, 63, 63);
+    border-radius: 5px;
+}
+
+#admin-dashboard img {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+#admin-dashboard .dashboard-heading img {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+#admin-dashboard .dashboard-heading #close-icon {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    left: 4rem;
+    top: -15px;
+    transition: all 1s ease;
+}
+
+#admin-dashboard .dashboard-heading #close-icon:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#admin-dashboard .dashboard-heading span {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -15px;
+    color: var(--dark);
+}
+
+#admin-dashboard .dashboard-content span {
+    position: relative;
+    top: -20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+#admin-dashboard .dashboard-search {
+    position: relative;
+    top: -30px;
+}
+
+#admin-dashboard .dashboard-search input {
+    outline: none;
+    height: 25px;
+    width: 80%;
+    position: relative;
+    left: 10px;
+    padding: 3px;
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    top: 10px;
+}
+
+#admin-dashboard .dashboard-search img {
+    position: relative;
+    left: 10px;
+    bottom: -20px;
+    height: 20px;
+    width: 20px;
+    top: 25px;
+}
+
+#admin-dashboard .dashboard-content .employee ul li {
+    text-decoration: none;
+    list-style: none;
+    color: var(--dark);
+    font-size: 15px;
+    position: relative;
+    left: 50px;
+    margin-top: 5px;
+    position: relative;
+    top: -30px;
+    z-index: 10px;
+
+}
+
+#admin-dashboard .dashboard-content .employee ul li:hover {
+    background-color: var(--gray-dark);
+}
+
+#admin-dashboard .dashboard-content .employee ul li a {
+    color: var(--dark);
+}
+
+#admin-dashboard .dashboard-content .employee ul {
+    display: block;
+}
+
+#admin-dashboard .dashboard-content .employee .angle-down {
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: relative;
+    left: 200px;
+    top: -45px;
+    cursor: pointer;
+    rotate: -90deg;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.dashboard #main {
+    width: 70%;
+    height: auto;
+    position: relative;
+    left: 30%;
+}
+
+/*Admin dashboard ends here*/
